@@ -1,6 +1,8 @@
 # lambdakka #
 
-Welcome to lambdakka!
+__Important:__ This is a work in progress and not ready for production use.
+
+Lambdakka let's you run your akka http on API Gateway and AWS Lambda.
 
 ## Contribution policy ##
 

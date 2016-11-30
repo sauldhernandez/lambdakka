@@ -1,9 +1,3 @@
-lazy val lambdakka =
-  project.in(file(".")).enablePlugins(AutomateHeaderPlugin, GitVersioning)
-
-libraryDependencies ++= Vector(
-  Library.scalaTest % "test"
-)
-
-initialCommands := """|import default.lambdakka._
-                      |""".stripMargin
+lazy val core = project in file("core")
+lazy val example = (project in file("example")).dependsOn(core)
+lazy val deploy = project in file("deploy")

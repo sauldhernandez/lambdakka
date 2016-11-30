@@ -1,0 +1,36 @@
+{
+    "resource": "/{proxy+}",
+    "httpMethod": "GET",
+    "headers": null,
+    "path" : "/hello",
+    "queryStringParameters": null,
+    "pathParameters": {
+      "proxy": "hello"
+    },
+    "stageVariables": null,
+    "requestContext": {
+      "accountId": "411703158731",
+      "resourceId": "7vlbka",
+      "stage": "test-invoke-stage",
+      "requestId": "test-invoke-request",
+      "identity": {
+        "cognitoIdentityPoolId": null,
+        "accountId": "411703158731",
+        "cognitoIdentityId": null,
+        "caller": "411703158731",
+        "apiKey": "test-invoke-api-key",
+        "sourceIp": "test-invoke-source-ip",
+        "accessKey": "ASIAIFJ2V4LIKWT6DERQ",
+        "cognitoAuthenticationType": null,
+        "cognitoAuthenticationProvider": null,
+        "userArn": "arn:aws:iam::411703158731:root",
+        "userAgent": "Apache-HttpClient/4.5.x (Java/1.8.0_102)",
+        "user": "411703158731"
+      },
+      "resourcePath": "/{proxy+}",
+      "httpMethod": "GET",
+      "apiId": "owzxutezi7"
+    },
+    "body": null,
+    "isBase64Encoded": false
+}

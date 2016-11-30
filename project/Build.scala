@@ -4,22 +4,20 @@ import de.heikoseeberger.sbtheader.HeaderPlugin
 import de.heikoseeberger.sbtheader.HeaderPlugin.autoImport._
 import de.heikoseeberger.sbtheader.HeaderPattern
 import de.heikoseeberger.sbtheader.license._
-import org.scalafmt.sbt.ScalaFmtPlugin
-import org.scalafmt.sbt.ScalaFmtPlugin.autoImport._
 import sbt._
 import sbt.Keys._
 import sbt.plugins.JvmPlugin
 
-object Build extends AutoPlugin {
+object BuildPlugin extends AutoPlugin {
 
   override def requires =
-    JvmPlugin && HeaderPlugin && GitPlugin && ScalaFmtPlugin
+    JvmPlugin && HeaderPlugin && GitPlugin
 
   override def trigger = allRequirements
 
   override def projectSettings =
-    reformatOnCompileSettings ++
     Vector(
+      resolvers += Resolver.sonatypeRepo("releases"),
       // Compile settings
       scalaVersion := Version.Scala,
       crossScalaVersions := Vector(scalaVersion.value),
@@ -42,15 +40,10 @@ object Build extends AutoPlugin {
       mappings.in(Compile, packageBin)
         += baseDirectory.in(ThisBuild).value / "LICENSE" -> "LICENSE",
 
-      // scalafmt settings
-      formatSbtFiles := false,
-      scalafmtConfig := Some(baseDirectory.in(ThisBuild).value / ".scalafmt.conf"),
-      ivyScala := ivyScala.value.map(_.copy(overrideScalaVersion = sbtPlugin.value)), // TODO Remove once this workaround no longer needed (https://github.com/sbt/sbt/issues/2786)!
-
       // Git settings
       git.useGitDescribe := true,
 
       // Header settings
-      headers := Map("scala" -> BSD2Clause("2016", "saul"))
+      headers := Map("scala" -> BSD3Clause("2016", "saul"))
     )
 }
