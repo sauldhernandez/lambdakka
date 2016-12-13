@@ -1,0 +1,1 @@
+addSbtPlugin("com.sauldhernandez.lambdakka" % "lambdakka-deploy" % "0.1-SNAPSHOT")

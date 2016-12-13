@@ -22,8 +22,6 @@ object BuildPlugin extends AutoPlugin {
       scalaVersion := Version.Scala,
       crossScalaVersions := Vector(scalaVersion.value),
       scalacOptions ++= Vector(
-        "-unchecked",
-        "-deprecation",
         "-language:_",
         "-target:jvm-1.8",
         "-encoding", "UTF-8"
@@ -34,7 +32,7 @@ object BuildPlugin extends AutoPlugin {
         Vector(scalaSource.in(Test).value),
 
       // Publish settings
-      organization := "default",
+      organization := "com.sauldhernandez.lambdakka",
       licenses += ("BSD 3-Clause",
                    url("https://opensource.org/licenses/BSD-3-Clause")),
       mappings.in(Compile, packageBin)

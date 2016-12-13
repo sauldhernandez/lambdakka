@@ -1,0 +1,14 @@
+# Use container-based infrastructure
+sudo: false
+
+language: scala
+cache:
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
+
+jdk:
+  - openjdk8
+
+script:
+ - sbt deploy/scripted

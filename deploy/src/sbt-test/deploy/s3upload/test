@@ -1,0 +1,6 @@
+# Execute upload
+> runCloudformation
+# Verify files are the same
+> check
+# Remove bucket from s3
+> cleanup
