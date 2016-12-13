@@ -1,15 +1,16 @@
-# Use container-based infrastructure
 sudo: false
-
 language: scala
 cache:
   directories:
-    - $HOME/.ivy2/cache
-    - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
+  - $HOME/.ivy2/cache
+  - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
 scala:
-  - 2.10.6
+- 2.10.6
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 script:
- - sbt ++$TRAVIS_SCALA_VERSION deploy/scripted
+- sbt ++$TRAVIS_SCALA_VERSION deploy/scripted
+env:
+  global:
+  - secure: Vx4kyTd7BQxaejHu0BUn1w86pdjCX6VO0omLgdktmw9pX/EEcUy131y6lYGndnrgcZTEvzxiTy3mL4RGVispEAgZr3hkTZOvykw+mJeg598jDT/jru+rxFPV89bu4nQPS+XjvrcOj/xziw1+NBzlLaUiNKSLsqSwlzy/IxdrOIcec6OWjM4o5j/X4M3dFLvwY6QgXiCM7C3GekPhgmEGyj/s+Xw2MCXYgvrkmsSAN//aTV0ycWBQCTorD+Zzw1pzXv//RYNd2RzINTs/8rpdGxAm/EXCIT1JrXyu5OiBLL0qBbncDBKW8hg3Kd2+PC/2Dpzb5IF6MER/++zAXZZRO/31HevTTo5uWwfjH2hcDbeMKg8wm2FNxi+MRWUUewWmI1z4Glvhwk1uWNK6a8MNwQL1W00pH4NCrABX6rPaEALMNfCSO49RmJDorcLOJARj8vEB58I+yiQSzEHhiXytCBz7NGX7KuFyL0Q2Pt/KBthDdPx6lmhOJM0WS+YC1SDI1FLXyXEaNguHY1etPH6tF2Bnx3Q0KZYXggChTiJTfk/6RJXFucsdiC6hdmU2ZqsmUcdJnkibzpjqg2WPap2lNLC/NBjXL7ZvmwPZYCjrPZ+bQCa+SWcScFhqVPMpvVOwvkBBgEXMWcpAmaj17TEEPxOBV0MwUu+Wtp1Dvj/BoMI=
+  - secure: ZRDLCVAMST9jxORY3c9kz5DAgkhoXsQnC3Z7m8XOP0bgx8Rp1xFTWxNB99MpD2CgjP85BbgD+GQAOYIk46dd4BtFXgIOijzyDoTAtBmoCVDU6ddBBl1z2v6S9pnkkeuxmVlhPvBPQ16nZ6+ZP8dGA2nAXV2xql9r80yTYaePj50MTl/tQMAL34zuuxqHF06f0bdCB/DBrhtCdDRp2NSNvLLWBzgVp2LjEZrLVoGHLLkdAknJPt+RuaqXg7RyxLok8vPUwtHQnW4BGZ/zozBGR34yygIRH/nSKIIiP6gqEMnU0H5D2NWmUOTyG7Fvj8Q8kguzq82usr/qjG3y9ZtLqhvMBrE3gpuF/ci41/iE2vDGq05SQzO3Riu6ROvV9nvUSdcBCeD9pbYQrh2rPkK/bCspJ6BHrK91NCf4KLDO7/YjP2yLCpY5tZC61Tzcp/T+FpfBPJxGR1bZbHoKqpp+dlR5AVcxe1gdam0SAE0cuzRAIXdWDAvvUNU9meG0+iD0S0UvNRDVKNRCaWUCAnXv9trNWYW8creoVgBYTHtpecspfWJ5q9UUg7xAq4hfQ7C57E2JkUM3y/CnWkOAtXLRhdZfjkCCtTw0Z6SW1+h+i6GBbuQ8t24BxCzLS0oCG7b6Hd0VdzJgikMzuq5RMl3WX87PLO68RbR0Lz1XrfZSxHc=
