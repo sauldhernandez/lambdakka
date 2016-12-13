@@ -8,7 +8,7 @@ cache:
     - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
 
 jdk:
-  - openjdk8
+  - oraclejdk8
 
 script:
- - sbt deploy/scripted
+ - sbt ++$TRAVIS_SCALA_VERSION deploy/scripted
