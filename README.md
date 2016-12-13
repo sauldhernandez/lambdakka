@@ -1,5 +1,7 @@
 # lambdakka #
 
+[![Build Status](https://travis-ci.org/sauldhernandez/lambdakka.svg?branch=master)](https://travis-ci.org/sauldhernandez/lambdakka)
+
 __Important:__ This is a work in progress and not ready for production use.
 
 Lambdakka let's you run your akka http on API Gateway and AWS Lambda.
